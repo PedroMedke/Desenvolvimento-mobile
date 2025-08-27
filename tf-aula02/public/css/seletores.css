@@ -1,0 +1,107 @@
+.content ul.demo {
+    list-style: none;
+    margin: 0;
+}
+
+.content ul.demo>li {
+    border-left: 2px solid transparent;
+    background-color: #F0F0F0;
+    padding: 8px;
+    margin-bottom: 2px;
+}
+
+.content ul.demo>li.selected {
+    border-left: 2px solid #000;
+    background-color: #00FF00;
+}
+
+
+/** CODAR SELETORES **/
+
+/* EX 1*/
+.content ul.demo>li:first-child {
+    background-color: yellow;
+}
+
+/** Continue aqui **/
+
+#unico {
+  color: red;
+}
+
+li[data-type="attr"] {
+  text-decoration: underline;
+}
+
+li[data-role~="user"] {
+  font-style: italic;
+}
+
+ul.demo > li:nth-child(5) span {
+  font-size: 1.3em;
+}
+
+ul.demo > li:nth-child(6) {
+  border: 2px solid blue;
+}
+
+section.content ul.demo > li:nth-child(7),
+section.content ul.demo > li.ativo {
+  background-color: #ccc;
+}
+
+section.content ul.demo > li:nth-child(8) span {
+  font-weight: bold;    
+}
+
+li.especial.destaque {
+  text-transform: uppercase;
+}
+
+li[lang="pt-br"] {
+  color: green;
+}
+
+li[title^="começa"] {
+  font-style: italic;
+}
+
+section.content ul.demo > li:nth-child(12),
+section.content ul.demo > li[title$="termina"] {
+  background-color: pink;
+}
+
+/* -------- Parte 2 — Responsividade -------- */
+main {
+  display: flex;
+  gap: 1rem;
+}
+
+.content {
+  flex: 2;
+}
+
+aside {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* muda layout para coluna */
+  }
+
+  .content {
+    order: 1;
+    width: 100%;
+  }
+
+  aside {
+    order: 2;
+    width: 100%;
+  }
+}
+
+ul.demo > li.selected {
+  background-color: lightblue;
+  cursor: pointer;
+}
